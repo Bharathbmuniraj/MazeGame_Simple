@@ -7,8 +7,8 @@ int main()
     int locx = 11;
     int locy = 20;
 
-    int winx = 0;
-    int winy = 9;
+    int winx = 9;
+    int winy = 0;
 
     int testx = locx;
     int testy = locy;
@@ -71,8 +71,99 @@ int main()
 
     while(!game_won)
     {
+        cout<< endl<<endl;
+        cout << "What move would you like to make?";
+        cin >> input;
+        cout << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl
+        << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl ;
+        switch (input)
+        {
+            case 'w':
+                testy--;
+
+                break;
+            case 's':
+                testy++;
+
+                break;
+            case 'a':
+                testx--;
+
+                break;
+            case 'd':
+                testx++;
+
+                break;
+        }
+
+        if(maze[testy][testx])
+        {
+            locy=testy;
+            locx=testx;
+        }
+        else
+        {
+            testy=locy;
+            testx=locx;
+        }
+
+
+        cout<<endl<<endl<<endl<<endl<<endl<<endl
+            << "Ready to play a game! You are the Player represented by the P on the board. Go from the top to the bottom"<< endl
+            << "and you win the game. You can navigate with the w,a,s,d buttons on the keyboard and then hit enter. Good luck!"<<endl<<endl;
+
+        for(int i = 0; i<21;i++)
+        {
+            for(int j =0; j<21;j++)
+            {
+                if((i == locy)&&(j== locx))
+                {
+                    cout << "P ";
+                }
+                else if(maze[i][j])
+                {
+                    cout<<"  ";
+                }
+                else
+                {
+                    cout<<"W ";
+                }
+
+            }
+            cout<<endl;
+        }
+
+        if((locy == winy)&&(locx == winx))
+        {
+            game_won = true;
+        }
+
+
+
+
+
+
+
+
+
+
 
     }
+
+
+
+    cout<<endl<<endl<<endl;
+    cout<<"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<<endl
+        <<"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<<endl
+        <<"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<<endl
+        <<"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<<endl
+        <<"!!!!!!!!!!!!!!!!!!!!!!!Congratulations you beat the game!!!!!!!!!!!!!!!!!!!!!!"<<endl
+        <<"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<<endl
+        <<"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<<endl
+        <<"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<<endl
+        <<"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<<endl
+        <<"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"<<endl;
+
 }
 
 
