@@ -74,8 +74,10 @@ int main()
         cout<< endl<<endl;
         cout << "What move would you like to make?";
         cin >> input;
-        cout << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl
-        << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl ;
+        system("^j");
+        // cout << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl
+        // << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl ;
+        system("CLS");
         switch (input)
         {
             case 'w':
