@@ -4,6 +4,16 @@ using namespace std;
 
 int main()
 {
+    int locx = 11;
+    int locy = 20;
+
+    int winx = 0;
+    int winy = 9;
+
+    int testx = locx;
+    int testy = locy;
+
+    char input;
 
     bool game_won = false;
     bool maze [21][21]=
@@ -31,20 +41,17 @@ int main()
         {0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0}//21
     };
 
-    int locx = 9;
-    int locy = 0;
 
-    int winx = 11;
-    int winy = 20;
 
-    int testx = locx;
-    int testy = locy;
+    cout<<endl<<endl<<endl<<endl<<endl<<endl
+        << "Ready to play a game! You are the Player represented by the P on the board. Go from the top to the bottom"<< endl
+        << "and you win the game. You can navigate with the w,a,s,d buttons on the keyboard and then hit enter. Good luck!"<<endl<<endl;
 
     for(int i = 0; i<21;i++)
     {
         for(int j =0; j<21;j++)
         {
-            if((i == 0)&&(j==9))
+            if((i == locy)&&(j== locx))
             {
                 cout << "P ";
             }
@@ -62,10 +69,10 @@ int main()
     }
 
 
-    // while(!game_won)
-    // {
-    //
-    // }
+    while(!game_won)
+    {
+
+    }
 }
 
 
