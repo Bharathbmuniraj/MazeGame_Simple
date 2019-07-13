@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 int main()
@@ -44,7 +43,7 @@ int main()
 
 
     cout<<endl<<endl<<endl<<endl<<endl<<endl
-        << "Ready to play a game! You are the Player represented by the P on the board. Go from the top to the bottom"<< endl
+        << "Ready to play a game! You are the Player represented by the P on the board. Go from the first opening to the opposite one"<< endl
         << "and you win the game. You can navigate with the w,a,s,d buttons on the keyboard and then hit enter. Good luck!"<<endl<<endl;
 
     for(int i = 0; i<21;i++)
@@ -74,7 +73,7 @@ int main()
         cout<< endl<<endl;
         cout << "What move would you like to make?";
         cin >> input;
-        system("^j");
+
         // cout << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl
         // << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl ;
         system("CLS");
