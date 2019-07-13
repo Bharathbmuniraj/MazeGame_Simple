@@ -110,8 +110,8 @@ int main()
 
 
         cout<<endl<<endl<<endl<<endl<<endl<<endl
-            << "Ready to play a game! You are the Player represented by the P on the board. Go from the top to the bottom"<< endl
-            << "and you win the game. You can navigate with the w,a,s,d buttons on the keyboard and then hit enter. Good luck!"<<endl<<endl;
+            << "Ready to play a game! You are the Player represented by the P on the board. Go from one end to the other"<< endl
+            << "end and you win the game. You can navigate with the w,a,s,d buttons on the keyboard and then hit enter. Good luck!"<<endl<<endl;
 
         for(int i = 0; i<21;i++)
         {
